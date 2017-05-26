@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C13946D7-0705-471D-B59D-15FCE65F93EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Communiry.Entity</RootNamespace>
+    <AssemblyName>Communiry.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressEntity.cs" />
+    <Compile Include="BaseUserEntity.cs" />
+    <Compile Include="CategoryEntity.cs" />
+    <Compile Include="CategoryRelationshipsEntity.cs" />
+    <Compile Include="CategoryTypeConfigEntity.cs" />
+    <Compile Include="CityEntity.cs" />
+    <Compile Include="Comment\CommentEntity.cs" />
+    <Compile Include="Comment\CommentLikeCountEntity.cs" />
+    <Compile Include="Comment\CommentLikeEntity.cs" />
+    <Compile Include="Comment\CommentReportEntity.cs" />
+    <Compile Include="Comment\Enum\AuditStatusEnum.cs" />
+    <Compile Include="Comment\ResourceLikeCountEntity.cs" />
+    <Compile Include="Comment\TargetTypeEntity.cs" />
+    <Compile Include="DesignerMetaEntity.cs" />
+    <Compile Include="DistrictEntity.cs" />
+    <Compile Include="EnumType\AddressTypeEnum.cs" />
+    <Compile Include="EnumType\GenderEnum.cs" />
+    <Compile Include="EnumType\ImageTypeEnum.cs" />
+    <Compile Include="EnumType\ProductImportTypeEnum.cs" />
+    <Compile Include="EnumType\UserRoleEnum.cs" />
+    <Compile Include="EnumType\WorksImportTypeEnum.cs" />
+    <Compile Include="Group\GroupClassifyEntity.cs" />
+    <Compile Include="Group\GroupCommentEntity.cs" />
+    <Compile Include="Group\GroupCommentLikeCountEntity.cs" />
+    <Compile Include="Group\GroupCommentListEntity.cs" />
+    <Compile Include="Group\GroupInfoEntity.cs" />
+    <Compile Include="Group\GroupPostContentEntity.cs" />
+    <Compile Include="Group\GroupPostEntity.cs" />
+    <Compile Include="Group\GroupPostLikeEntity.cs" />
+    <Compile Include="Group\GroupPostReportEntity.cs" />
+    <Compile Include="Group\GroupUserEntity.cs" />
+    <Compile Include="NewsEntity.cs" />
+    <Compile Include="ProductMetaEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinceEntity.cs" />
+    <Compile Include="ProductEntity.cs" />
+    <Compile Include="SupplierMetaEntity.cs" />
+    <Compile Include="TagEntity.cs" />
+    <Compile Include="TagRelationshipsEntity.cs" />
+    <Compile Include="TagTypeConfigEntity.cs" />
+    <Compile Include="UserImagesEntity.cs" />
+    <Compile Include="UserTagEntity.cs" />
+    <Compile Include="WorksEntity.cs" />
+    <Compile Include="WorksItemsEntity.cs" />
+    <Compile Include="WorksMetaEntity.cs" />
+    <Compile Include="WorksQIndexEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Community.Core\Community.Core.csproj">
+      <Project>{be0b9c9d-2a4a-4e8a-84f5-b36a2053602c}</Project>
+      <Name>Community.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

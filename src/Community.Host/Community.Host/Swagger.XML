@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Community.Host</name>
+    </assembly>
+    <members>
+        <member name="M:Community.Host.Controllers.CustomersController.Get(Community.Host.Controllers.CustomersController.GetDto)">
+            <summary>
+            xx
+            </summary>
+            <remarks>
+            额外注解
+            </remarks>        
+            <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.CustomersController.Post(Community.Host.Controllers.CustomersController.GetDto)">
+            <summary>
+            xx
+            </summary>
+            <param name="dto">dto doc</param>
+            <returns>{x:1,y:2}</returns>
+        </member>
+        <member name="T:Community.Host.Controllers.CustomersController.GetDto">
+            <summary>
+            xasdasdad
+            </summary>
+        </member>
+        <member name="P:Community.Host.Controllers.CustomersController.GetDto.name1">
+            <summary>
+            xxx
+            </summary> 
+        </member>
+        <member name="P:Community.Host.Controllers.CustomersController.GetDto.name12">
+            <summary>
+            x2
+            </summary>
+        </member>
+        <member name="M:Community.Host.Controllers.NewsController.Get(Community.Contact.News.GetHotNews)">
+             <summary>
+            get hot news
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.NewsController.Get(Community.Contact.News.GetNewsByCategory)">
+             <summary>
+            Get news by category
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.UserController.Patch(Community.Contact.User.UpdateNickName)">
+            <summary>
+            update user's nickname
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            get a single user base info
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.UserController.Get(Community.Contact.User.GetUserInfo)">
+            <summary>
+            get the authenticated user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.UserController.Post(Community.Contact.User.AddUser)">
+            <summary>
+            add the authenticated user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.UserController.Patch(Community.Contact.User.UpdateAvatar)">
+            <summary>
+            update user's avatar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.WorksController.Patch(Community.Contact.Works.CreateWorks)">
+             <summary>
+            Create a works
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.WorksController.Get(System.Int32)">
+             <summary>
+            get a works
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.WorksController.Get(Community.Contact.Works.GetWorksList)">
+             <summary>
+            get works list
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Community.Host.Controllers.WorksController.Get(Community.Contact.Works.UpdateWorks)">
+             <summary>
+            update a works
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="P:Community.Host.Models.Customer.Name">
+            <summary>
+            xxxx
+            </summary>
+        </member>
+    </members>
+</doc>

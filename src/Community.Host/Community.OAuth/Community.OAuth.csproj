@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F682A53-AB27-4A99-A7C9-EE99AD061B45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Community.OAuth</RootNamespace>
+    <AssemblyName>Community.OAuth</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.11\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiValueProviderFactory\OauthProviderFactory.cs" />
+    <Compile Include="ApiValueProvider\ETagParameterBinding.cs" />
+    <Compile Include="ApiValueProvider\OauthValueProvider.cs" />
+    <Compile Include="Attribute\OAuthRequestAttribute.cs" />
+    <Compile Include="Attribute\FromOauthAttribute.cs" />
+    <Compile Include="Exception\OAuthTokenValidationException.cs" />
+    <Compile Include="ExtendServiceStack.cs" />
+    <Compile Include="IOAuth.cs" />
+    <Compile Include="Middleware\OAuthMiddleware.cs" />
+    <Compile Include="OAuth.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Communiry.Entity\Communiry.Entity.csproj">
+      <Project>{c13946d7-0705-471d-b59d-15fce65f93ec}</Project>
+      <Name>Communiry.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Common\Community.Common.csproj">
+      <Project>{07328bc4-39ef-43af-a916-4c77c244f6d1}</Project>
+      <Name>Community.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Contact\Community.Contact.csproj">
+      <Project>{da44d1e0-b6b1-4903-81e8-4282116ea656}</Project>
+      <Name>Community.Contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Core\Community.Core.csproj">
+      <Project>{be0b9c9d-2a4a-4e8a-84f5-b36a2053602c}</Project>
+      <Name>Community.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.EntityFramework\Community.EntityFramework.csproj">
+      <Project>{e0c5e04f-136b-4bf9-87f0-dc07afd04bb0}</Project>
+      <Name>Community.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.IService\Community.IService.csproj">
+      <Project>{8d4bc97e-2c49-4bef-9f7f-2ab7c0b049fc}</Project>
+      <Name>Community.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Service\Community.Service.csproj">
+      <Project>{349951dd-f51e-44ca-a056-9a73e7efc859}</Project>
+      <Name>Community.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

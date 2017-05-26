@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\RdKafka.Internal.librdkafka.0.9.1\build\RdKafka.Internal.librdkafka.props" Condition="Exists('..\packages\RdKafka.Internal.librdkafka.0.9.1\build\RdKafka.Internal.librdkafka.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{349951DD-F51E-44CA-A056-9A73E7EFC859}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Community.Service</RootNamespace>
+    <AssemblyName>Community.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>d9c51214</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.2.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RdKafka, Version=0.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RdKafka.0.9.1\lib\net451\RdKafka.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommentService.cs" />
+    <Compile Include="CommonService.cs" />
+    <Compile Include="Common\ServiceGlobalConfig.cs" />
+    <Compile Include="Const\CommentConst.cs" />
+    <Compile Include="Const\GroupConst.cs" />
+    <Compile Include="Const\WorksConst.cs" />
+    <Compile Include="GroupService.cs" />
+    <Compile Include="Model\AllResourceModel.cs" />
+    <Compile Include="Model\Comment\CommentInfoModel.cs" />
+    <Compile Include="Model\Comment\TargetTypeEnum.cs" />
+    <Compile Include="Model\Comment\MQCommentModel.cs" />
+    <Compile Include="Model\DesignerWorksListModel.cs" />
+    <Compile Include="Model\Group\GroupInfoModel.cs" />
+    <Compile Include="Model\Group\GroupPostCommentModel.cs" />
+    <Compile Include="Model\Group\MemberInfoModel.cs" />
+    <Compile Include="Model\Group\PostDetailModel.cs" />
+    <Compile Include="Model\Group\PostInfoModel.cs" />
+    <Compile Include="Model\ObjectCategoryModel.cs" />
+    <Compile Include="Model\SearchProductInfoModel.cs" />
+    <Compile Include="Model\SearchNewsModel.cs" />
+    <Compile Include="Model\SearchWorksModel.cs" />
+    <Compile Include="Model\SupplierProductListModel.cs" />
+    <Compile Include="Model\UserAddressModel.cs" />
+    <Compile Include="NewsService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="TagService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="WorksService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Communiry.Entity\Communiry.Entity.csproj">
+      <Project>{c13946d7-0705-471d-b59d-15fce65f93ec}</Project>
+      <Name>Communiry.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Common\Community.Common.csproj">
+      <Project>{07328bc4-39ef-43af-a916-4c77c244f6d1}</Project>
+      <Name>Community.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Contact\Community.Contact.csproj">
+      <Project>{da44d1e0-b6b1-4903-81e8-4282116ea656}</Project>
+      <Name>Community.Contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.Core\Community.Core.csproj">
+      <Project>{be0b9c9d-2a4a-4e8a-84f5-b36a2053602c}</Project>
+      <Name>Community.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.EntityFramework\Community.EntityFramework.csproj">
+      <Project>{e0c5e04f-136b-4bf9-87f0-dc07afd04bb0}</Project>
+      <Name>Community.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Community.IService\Community.IService.csproj">
+      <Project>{8d4bc97e-2c49-4bef-9f7f-2ab7c0b049fc}</Project>
+      <Name>Community.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\codedemo\Luene.Net_Demo\Luene.Net_Demo\Vida.Community.IndexWorker\Vida.Community.IndexWorker.csproj">
+      <Project>{4c3e3715-0022-4567-aaa3-282fd477101c}</Project>
+      <Name>Vida.Community.IndexWorker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\codedemo\Luene.Net_Demo\Luene.Net_Demo\Vida.Lucene.Core\Vida.Lucene.Core.csproj">
+      <Project>{698f86bf-0923-4793-990b-d0d00ccc78fe}</Project>
+      <Name>Vida.Lucene.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\RdKafka.Internal.librdkafka.0.9.1\build\RdKafka.Internal.librdkafka.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RdKafka.Internal.librdkafka.0.9.1\build\RdKafka.Internal.librdkafka.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

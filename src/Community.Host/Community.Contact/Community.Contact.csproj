@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA44D1E0-B6B1-4903-81E8-4282116EA656}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Community.Contact</RootNamespace>
+    <AssemblyName>Community.Contact</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Community.Contact.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Community.Contact.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Swashbuckle.Core.5.5.3\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDto.cs" />
+    <Compile Include="Category\GetObjectCategory.cs" />
+    <Compile Include="Category\GetTargetAllCategory.cs" />
+    <Compile Include="Category\UpdateObjectCategory.cs" />
+    <Compile Include="Comment\AddCommentDto.cs" />
+    <Compile Include="Comment\DeleteCommentDto.cs" />
+    <Compile Include="Comment\Enum\QuerySortTypeEnum.cs" />
+    <Compile Include="Comment\Enum\TargetTypeEnum.cs" />
+    <Compile Include="Comment\GetCommentDto.cs" />
+    <Compile Include="Comment\GetResourceLikeCountDto.cs" />
+    <Compile Include="Comment\GetUserIsLikeAResourceDto.cs" />
+    <Compile Include="Comment\GetUserLikeListDto.cs" />
+    <Compile Include="Comment\LikeDto.cs" />
+    <Compile Include="Comment\ReportCommentDto.cs" />
+    <Compile Include="Comment\ResourceLikeDto.cs" />
+    <Compile Include="Common\GetAllResource.cs" />
+    <Compile Include="Common\GetCity.cs" />
+    <Compile Include="Common\GetDistrict.cs" />
+    <Compile Include="Common\GetPageIndexData.cs" />
+    <Compile Include="Common\GetProvince.cs" />
+    <Compile Include="Enum\AddressTypeEnum.cs" />
+    <Compile Include="Enum\CategoryTypeEnum.cs" />
+    <Compile Include="Enum\NewsCategoryEnum.cs" />
+    <Compile Include="Enum\ProductCategoryEnum.cs" />
+    <Compile Include="Enum\ResourceTypeEnum.cs" />
+    <Compile Include="Enum\GenderEnum.cs" />
+    <Compile Include="Enum\TagResourceTypeEnum.cs" />
+    <Compile Include="Enum\UpdateCategoryTypeEnum.cs" />
+    <Compile Include="Enum\UserImageTypeEnum.cs" />
+    <Compile Include="Enum\UserRoleEnum.cs" />
+    <Compile Include="Enum\WorksCategoryEnum.cs" />
+    <Compile Include="Enum\ProductCreateTypeEnum.cs" />
+    <Compile Include="Enum\WorksCreateTypeEnum.cs" />
+    <Compile Include="Group\AddComment.cs" />
+    <Compile Include="Group\AddPost.cs" />
+    <Compile Include="Group\Author.cs" />
+    <Compile Include="Group\ClassifyInfoDto.cs" />
+    <Compile Include="Group\DeleteComment.cs" />
+    <Compile Include="Group\DeletePost.cs" />
+    <Compile Include="Group\Enum\PostSortTypeEnum.cs" />
+    <Compile Include="Group\GetClassifyList.cs" />
+    <Compile Include="Group\GetClassifyNewPostList.cs" />
+    <Compile Include="Group\GetGroupDetial.cs" />
+    <Compile Include="Group\GetGroupInfoList.cs" />
+    <Compile Include="Group\GetGroupMember.cs" />
+    <Compile Include="Group\GetGroupPostDetail.cs" />
+    <Compile Include="Group\GetGroupPostList.cs" />
+    <Compile Include="Group\GetGroupPostListByUserId.cs" />
+    <Compile Include="Group\GetHotPost.cs" />
+    <Compile Include="Group\GetPostCommentList.cs" />
+    <Compile Include="Group\GetUserJoinGroupList.cs" />
+    <Compile Include="Group\GroupDetailInfoDto.cs" />
+    <Compile Include="Group\GroupInfoDto.cs" />
+    <Compile Include="Group\JoinGroup.cs" />
+    <Compile Include="Group\MemberInfoDto.cs" />
+    <Compile Include="Group\PostInfoDto.cs" />
+    <Compile Include="Group\QuitGroup.cs" />
+    <Compile Include="Group\UpdatePost.cs" />
+    <Compile Include="News\GetNewsByCategory.cs" />
+    <Compile Include="News\GetHotNews.cs" />
+    <Compile Include="Product\CreateProduct.cs" />
+    <Compile Include="Product\DeleteProduct.cs" />
+    <Compile Include="Product\GetImportPorductIdList.cs" />
+    <Compile Include="Product\GetProductDetail.cs" />
+    <Compile Include="Product\GetProductListByUNameOrPName.cs" />
+    <Compile Include="Product\GetProductListByUserId.cs" />
+    <Compile Include="Product\SearchProductByType.cs" />
+    <Compile Include="Product\UpdateProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag\GetHostTags.cs" />
+    <Compile Include="Tag\GetUserTags.cs" />
+    <Compile Include="Tag\UpdateUserTags.cs" />
+    <Compile Include="User\AddUser.cs" />
+    <Compile Include="User\GetDesignerMetaInfo.cs" />
+    <Compile Include="User\GetSingleUser.cs" />
+    <Compile Include="User\GetTokenByCode.cs" />
+    <Compile Include="User\GetUserInfo.cs" />
+    <Compile Include="User\GetUserResourceShareStatus.cs" />
+    <Compile Include="User\GetVidaDesignerShareUrl.cs" />
+    <Compile Include="User\UpdateDesignerDesignAge.cs" />
+    <Compile Include="User\UpdateDesingerBaseInfo.cs" />
+    <Compile Include="User\UpdateSupplierBaseInfo.cs" />
+    <Compile Include="User\UpdateUserAddress.cs" />
+    <Compile Include="User\UpdateUserBaseInfo.cs" />
+    <Compile Include="User\UpdateUserIntro.cs" />
+    <Compile Include="User\UpdateUserNickName.cs" />
+    <Compile Include="User\UpdateUserImg.cs" />
+    <Compile Include="Works\CreateWorks.cs" />
+    <Compile Include="Works\DeleteWorks.cs" />
+    <Compile Include="Works\GetDesignerWorksList.cs" />
+    <Compile Include="Works\GetIpmortWorksIdList.cs" />
+    <Compile Include="Works\GetWorks.cs" />
+    <Compile Include="Works\GetWorksListByUNameOrWName.cs" />
+    <Compile Include="Works\ItemInfo.cs" />
+    <Compile Include="Works\SearchWorksList.cs" />
+    <Compile Include="Works\UpdateWorks.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
