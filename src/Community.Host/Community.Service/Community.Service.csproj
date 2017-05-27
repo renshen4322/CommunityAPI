@@ -123,14 +123,6 @@
       <Project>{8d4bc97e-2c49-4bef-9f7f-2ab7c0b049fc}</Project>
       <Name>Community.IService</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\codedemo\Luene.Net_Demo\Luene.Net_Demo\Vida.Community.IndexWorker\Vida.Community.IndexWorker.csproj">
-      <Project>{4c3e3715-0022-4567-aaa3-282fd477101c}</Project>
-      <Name>Vida.Community.IndexWorker</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\codedemo\Luene.Net_Demo\Luene.Net_Demo\Vida.Lucene.Core\Vida.Lucene.Core.csproj">
-      <Project>{698f86bf-0923-4793-990b-d0d00ccc78fe}</Project>
-      <Name>Vida.Lucene.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
